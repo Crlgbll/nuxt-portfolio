@@ -6,10 +6,10 @@
 
         <div class="col-md-6 order-md-1">
           <div
-            class="border rounded-3xl shadow-3xl p-4 text-center text-white bg-neutral-400"
+            class="border rounded-3xl shadow-3xl p-4 text-center text-black bg-white border-black border-2"
           >
             <img
-              class="w-48 h-48 sm:w-48 sm:h-48 lg:w-96 lg:h-96 mx-auto rounded-3xl bg-[#964B00] shadow-lg shadow-black"
+              class="w-48 h-48 sm:w-48 sm:h-48 lg:w-96 lg:h-96 mx-auto rounded-3xl bg-white shadow-lg shadow-black"
               src="~/assets/images/carlo-formal.png"
               alt="Carlo"
             />
@@ -23,7 +23,7 @@
                 Contact Me
               </button>
               <button
-                class="w-32 px-4 py-2 text-sm font-medium text-center mx-2 text-white border-2 border-white rounded-lg hover:bg-blue-800"
+                class="w-32 px-4 py-2 text-sm font-medium text-center mx-2 text-black border-2 border-black rounded-lg hover:bg-blue-800"
                 @click="openSocialsModal"
               >
                 Socials
@@ -35,7 +35,7 @@
         <!-- Place the Card component to the right at the "md" breakpoint (768px) -->
         <div class="col-md-6 order-md-2 mb-10">
           <div class="bg-black text-white p-4 rounded-3xl">
-            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <h2 class="text-3xl font-semibold mb-4 text-center">About Me</h2>
             <p class="leading-relaxed text-xl">
               Hello, My name is Carlo S. Gaballo, and I'm an upbeat, hardworking
               guy from the Philippines' bustling city of Butuan in the province
