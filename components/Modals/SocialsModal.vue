@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
   <div class="flex items-center justify-center">
+=======
+  <div class=" flex items-center justify-center">
+>>>>>>> a274116a62501319d6b029b37a0b05cf4bb10209
     <div class="col-12 col-md-8 col-lg-6 col-xl-4">
       <dialog
         ref="SocialsModal"
