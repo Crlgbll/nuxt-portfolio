@@ -1,15 +1,16 @@
 <template>
-  <div class="h-60 w-full bg-black/90 rounded-xl container-fluid z-40">
+  <div
+    class="container px-5 mt-60 text-white border-black border-2 rounded-3xl bg-gray-600 relative"
+  >
     <div class="row">
-      <div class="col">
-        <div class="p-10 flex flex-col items-center">
+      <div class="h-54 w-100 rounded-xl d-flex">
+        <div class="align-items-center">
           <p
-            class="xl:text-4xl md:text-3xl italic text-white font-bold text-justify indent-16"
+            class="xl:text-4xl md:text-3xl italic font-bold text-end align w-auto my-10 mx-10"
           >
-            "Embrace discomfort, for experience beyod comfort is life's greates
-            teacher." <br />
-            <br />
-            <span class="absolute text-3xl right-20">-Carlo 2023</span>
+            "Embrace discomfort, for experience beyond comfort is life's
+            greatest teacher." <br />
+            -Carlo
           </p>
         </div>
       </div>
@@ -21,4 +22,14 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style>
+.brown {
+  background-size: cover;
+  background-color: #964b00;
+}
+
+/* This is a custom utility to mimic the effect of indenting the first line of the quote */
+.indent-16 {
+  text-indent: 4rem;
+}
+</style>

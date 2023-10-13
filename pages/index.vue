@@ -1,79 +1,28 @@
 <template>
-  <div class="container-fluid h-screen w-full text-black font-Poppins">
+  <div class="container-fluid bg-white h-full w-full">
     <Navbar />
+    <section id="Home">
+      <Home />
+    </section>
 
-    <div class="container py-4">
-      <div class="py-4 p-lg-4">
-        <div
-          class="flex flex-col-reverse md:flex-row justify-between items-center space-y-8 md:space-y-0"
-        >
-          <div class="md:w-1/2 md:pl-8">
-            <div class="max-w-lg bg-black text-white p-8 rounded-lg shadow-lg">
-              <h3
-                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-                ref="typeItTextH3"
-              >
-                <span>Hello, I am <br /></span>
-                Carlo Gaballo
-              </h3>
+    <svg
+      class="w-full relative"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#000000"
+        fill-opacity="1"
+        d="M0,32L360,224L720,96L1080,128L1440,96L1440,320L1080,320L720,320L360,320L0,320Z"
+      ></path>
+    </svg>
 
-              <div class="mt-4 flex items-center space-x-4">
-                <!-- NuxtLink Components for View Projects and Read About Me -->
-              </div>
-            </div>
-          </div>
+    <section id="About ">
+      <About />
+    </section>
 
-          <div class="md:w-1/2 flex justify-center">
-            <img
-              class="w-48 h-48 md:w-60 md:h-60 lg:w-72 lg:h-72 rounded-full shadow-black/60 shadow-xl"
-              src="~/assets/images/nonformal-trans.png"
-              alt="Carlo Gaballo"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <section id="Certification">
+      <Certificates />
+    </section>
   </div>
 </template>
-
-<script>
-import TypeIt from "typeit";
-
-export default {
-  data() {
-    return {
-      showp: false,
-    };
-  },
-  mounted() {
-    this.startTyping();
-  },
-  methods: {
-    startTyping() {
-      this.typeInH3();
-    },
-    typeInH3() {
-      new TypeIt(this.$refs.typeItTextH3, {
-        speed: 50,
-        afterComplete: (instance) => {
-          instance.destroy();
-          this.showp = true;
-          this.typeInp();
-        },
-      }).go();
-    },
-    typeInp() {
-      new TypeIt(this.$refs.typeItTextP, {
-        speed: 50,
-        afterComplete: (instance) => {
-          instance.destroy();
-          setTimeout(() => {
-            this.showp = false;
-            this.startTyping();
-          }, 500);
-        },
-      }).go();
-    },
-  },
-};
-</script>

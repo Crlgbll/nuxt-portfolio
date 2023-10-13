@@ -1,63 +1,61 @@
 <template>
-  <nav class="h-14 py-2 w-full sticky top-0 flex justify-between z-50">
-    <div class="col-sm-6">
-      <NuxtLink to="/" class="flex font-bold text-3xl">
-        <span class="text-purple-700">C</span
-        ><span class="text-red-700">G</span>
-      </NuxtLink>
-    </div>
-    <div class="flex items-center relative">
-      <button
-        @click="toggleMenu"
-        :class="{ active: isMenuOpen }"
-        class="rounded-full h-12 w-12 right-0 absolute hover:scale-105 hover:text-blue-700 flex justify-center items-center z-50"
-      >
-        <span
-          class="w-8 h-1 bg-black absolute left-1/2 bottom-1/2 transform -translate-x-1/2 -translate-y-px transition-transform duration-300"
-          :class="{ 'rotate-45': isMenuOpen }"
-        ></span>
-        <span
-          class="w-8 h-1 bg-black absolute left-1/2 bottom-1/2 transform -translate-x-1/2 transition-opacity duration-300"
-          :class="{ 'opacity-0': isMenuOpen }"
-        ></span>
-        <span
-          class="w-8 h-1 bg-black absolute left-1/2 bottom-1/2 transform -translate-x-1/2 transition-transform duration-300"
-          :class="{ '-rotate-45': isMenuOpen }"
-        ></span>
-        <span
-          class="w-8 h-1 bg-black absolute left-1/2 bottom-1/2 transform -translate-x-1/2 transition-transform duration-300"
-          :class="{ '-rotate-180': isMenuOpen }"
-        ></span>
-      </button>
-      <!-- Dropdown Menu -->
-      <transition name="fade">
-        <div v-if="isMenuOpen" class="dropdown-menu \">
-          <!-- Menu Items -->
-          <NuxtLink
-            v-for="linkItem in linksData"
-            :key="linkItem.id"
-            :to="linkItem.path"
-            class="menu-item hover:font-bold flex sm:inline-flex text-lg"
-            @click="toggleMenu"
-          >
-            {{ linkItem.label }}
-          </NuxtLink>
+  <nav
+    class="container bg-white/0 py-4 sm:py-2 sticky top-0 text-black font-Poppins z-50"
+  >
+    <div class="r mx-auto flex justify-between items-center">
+      <div class="sm:col-span-6">
+        <NuxtLink to="/" class="text-3xl font-bold"> CG </NuxtLink>
+      </div>
+      <!-- Move the menu button to the upper right side -->
+      <div class="sm:hidden relative">
+        <button
+          @click="toggleMenu"
+          :class="{ 'hover:scale-105 ': isMenuOpen }"
+          class="p-2"
+        >
+          <Hamburger :isMenuOpen="isMenuOpen" @toggleMenu="toggleMenu" />
+        </button>
+        <div
+          v-if="isMenuOpen"
+          class="absolute top-14 right-0 mt-2 shadow-md bg-white/0 font-bold rounded-md"
+        >
+          <!-- Dropdown Menu Content -->
+          <div class="py-2 px-4">
+            <NuxtLink
+              v-for="linkItem in linksData"
+              :key="linkItem.id"
+              :to="linkItem.path"
+              class="menu rounded-box text-2xl block mb-2"
+            >
+              {{ linkItem.label }}
+            </NuxtLink>
+          </div>
         </div>
-      </transition>
+      </div>
+
+      <div class="hidden sm:col-span-6 sm:flex items-center space-x-4">
+        <NuxtLink
+          v-for="linkItem in linksData"
+          :key="linkItem.id"
+          :to="linkItem.path"
+          class="menu rounded-box text-l hover:scale-105 hover:font-bold"
+        >
+          {{ linkItem.label }}
+        </NuxtLink>
+      </div>
     </div>
   </nav>
 </template>
 
-<script lang="ts">
+<script>
 export default {
   data() {
     return {
       isMenuOpen: false,
       linksData: [
-        { id: 1, path: "/", label: "Home" },
-        { id: 2, path: "~/About", label: "About" },
-        { id: 3, path: "/", label: "Stacks" },
-        { id: 4, path: "/", label: "Portfolio" },
+        { id: 1, path: "#Home", label: "Home" },
+        { id: 2, path: "#About", label: "About" },
+        { id: 3, path: "#Projects", label: "Portfolio" },
       ],
     };
   },
@@ -68,33 +66,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.dropdown-menu {
-  height: 200px;
-  width: 110px;
-  position: absolute;
-  top: calc(100%);
-  transform: translateX(-100%);
-  z-index: 1000;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-button.active + .dropdown-menu {
-  display: block;
-}
-
-.menu-item {
-  margin-bottom: 10px;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
