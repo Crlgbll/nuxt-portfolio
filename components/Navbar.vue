@@ -55,7 +55,7 @@ export default {
       linksData: [
         { id: 1, path: "#Home", label: "Home" },
         { id: 2, path: "#About", label: "About" },
-        { id: 3, path: "#Projects", label: "Portfolio" },
+        { id: 3, path: "#Certificates", label: "Certification" },
       ],
     };
   },

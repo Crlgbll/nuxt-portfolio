@@ -5,7 +5,7 @@
         ref="SocialsModal"
         class="modal modal-bottom sm:modal-middle w-full bg-black text-center text-white py-4 mx-auto"
       >
-        <div class="modal-box">
+        <div class="modal-box bg-gray-700">
           <h3 class="font-bold text-lg">Socials</h3>
 
           <NuxtLink to="https://www.facebook.com/Karurogaballo">

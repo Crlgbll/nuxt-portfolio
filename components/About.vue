@@ -1,12 +1,12 @@
 <template>
-  <section class="py-12 mt-10">
-    <div class="container">
+  <section class="py-12">
+    <div class="container overflow-hidden">
       <div class="row">
         <!-- Place the div with Card component to the left on all screen sizes -->
 
         <div class="col-md-6 order-md-1">
           <div
-            class="border rounded-3xl shadow-3xl p-4 text-center text-white bg-black"
+            class="border rounded-3xl shadow-3xl p-4 text-center text-white bg-neutral-400"
           >
             <img
               class="w-48 h-48 sm:w-48 sm:h-48 lg:w-96 lg:h-96 mx-auto rounded-3xl bg-[#964B00] shadow-lg shadow-black"
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Place the Card component to the right at the "md" breakpoint (768px) -->
-        <div class="col-md-6 order-md-2">
+        <div class="col-md-6 order-md-2 mb-10">
           <div class="bg-black text-white p-4 rounded-3xl">
             <h2 class="text-3xl font-semibold mb-4">About Me</h2>
             <p class="leading-relaxed text-xl">

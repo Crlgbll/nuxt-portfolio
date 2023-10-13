@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-sm-6 col-md-3 col-lg-3 mb-4">
         <div
-          class="relative w-full sm:w-72 md:w-[400px] lg:w-[400px] p-6 rounded-3xl cursor-pointer hover:scale-105 transform transition-transform duration-300"
+          class="relative w-full sm:w-72 md:w-[700px] lg:w-[530px] p-6 rounded-3xl cursor-pointer hover:scale-105 bg-[#964b00]"
         >
           <div class="text-white text-center">
             <p class="text-xl font-bold">TECHNOLOGY STACK</p>
@@ -15,10 +15,6 @@
           >
             <icon :name="iconName"></icon>
           </div>
-          <div
-            class="absolute inset-0 z-[-1] rounded-lg"
-            style="background-color: #964b00"
-          ></div>
         </div>
       </div>
 

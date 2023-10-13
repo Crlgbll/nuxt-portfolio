@@ -1,38 +1,25 @@
 <template>
-  <div class="container-fluid bg-white h-full w-full mt-20">
-    <section id="Home" class="relative">
+  <div class="container-fluid bg-white h-full w-full">
+    <section id="Home" class="relative mt-28">
       <div class="container">
         <div class="grid md:grid-cols-2 gap-8">
           <div class="md:col-span-1">
             <div
-              class="bg-[#964B00] text-white p-8 rounded-3xl shadow-xl shadow-black"
+              class="bg-[#964B00] text-white p-4 md:p-8 rounded-3xl shadow-xl shadow-black"
             >
               <h3
-                class="text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4"
+                class="text-base md:text-lg lg:text-3xl xl:text-5xl font-bold text-white mb-4 md:mb-8"
               >
-                <span>CARLO GABALLO<br /></span>
+                <br class="md:hidden" />
+                <span class="block md:inline">CARLO GABALLO</span>
                 FULL-STACK DEVELOPER
               </h3>
-              <div class="text-xl mt-4 space-y-4">
-                <NuxtLink
-                  to="#"
-                  class="block text-gray-800 font-semibold hover:text-black"
-                >
-                  View Projects
-                </NuxtLink>
-                <NuxtLink
-                  to="#About"
-                  class="block text-gray-800 font-semibold hover:text-black"
-                >
-                  Read About Me
-                </NuxtLink>
-              </div>
             </div>
           </div>
 
           <div class="md:col-span-1 flex justify-center">
             <img
-              class="w-48 h-48 md:w-60 md:h-60 lg:w-96 lg:h-96 rounded-full md:order-2 order-1 bg-white shadow-xl"
+              class="w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full md:order-2 order-1 bg-white shadow-xl"
               src="~/assets/images/nonformal-trans.png"
               alt="Carlo Gaballo"
             />

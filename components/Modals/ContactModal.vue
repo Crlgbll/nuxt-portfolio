@@ -3,7 +3,7 @@
     ref="ContactModal"
     class="modal modal-bottom sm:modal-middle bg-black text-center text-white py-4 mx-automodal w-full"
   >
-    <div class="modal-box">
+    <div class="modal-box bg-gray-700">
       <h3 class="font-bold text-lg">Contact Infromation</h3>
       <p class="font-bold text-lg text-start">
         <Icon name="ic:baseline-local-phone"></Icon> : +639301355570
