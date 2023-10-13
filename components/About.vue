@@ -42,7 +42,7 @@
               of Agusan del Norte. I'm currently pursuing a Bachelor of
               Information Technology degree at Caraga State University, where I
               can indulge my insatiable curiosity about all things
-              technological.
+              technological..
             </p>
           </div>
           <Card />
